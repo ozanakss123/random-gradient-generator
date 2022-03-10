@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Random Gradient Generator</title>
+</head>
+<body>
+    <div class="container">
+        <p>Random Gradient Generator</p>
+        <div class="colors">
+            <input type="color" id="color-a" value="#b56576">
+            <input type="color" id="color-b" value="#eaac8b">
+        </div>
+        <div class="buttons">
+            <button onclick="setDirection('to top', this)"><i class="fa-solid fa-arrow-up"></i></button>
+            <button onclick="setDirection('to bottom', this)" class="active"><i class="fa-solid fa-arrow-down"></i></button>
+            <button onclick="setDirection('to left', this)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="setDirection('to right', this)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button onclick="setDirection('to top right', this)" class="rotate"><i class="fa-solid fa-arrow-up"></i></button>
+            <button onclick="setDirection('to bottom left', this)" class="rotate"><i class="fa-solid fa-arrow-down"></i></button>
+            <button onclick="setDirection('to top left', this)" class="rotate"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="setDirection('to bottom right', this)" class="rotate"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="btn-gen">
+            <button id="submit" onclick="generateCode()">Generate</button>
+            <button id="random">Random</button>
+        </div>
+        <div class="output">
+            <textarea  id="code" rows="2"></textarea>
+            <button id="copy" onclick="copyText()">Copy</button>
+        </div>
+        <footer>
+            <a href="https://github.com/ozanakss123"><img src="https://icon-library.com/images/github-icon-white/github-icon-white-5.jpg" alt="github"></a>
+        </footer>
+    </div>
+    
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/f9a9fc750c.js" crossorigin="anonymous"></script>
+</body>
+</html>
